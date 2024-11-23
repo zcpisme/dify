@@ -1,0 +1,67 @@
+identity:
+  name: chat_summary_saver
+  author: zcp
+  label:
+    en_US: Chat Summary Saver
+    zh_Hans: 对话总结保存工具
+    pt_BR: Chat Summary Saver
+  icon: icon.svg
+description:
+  human:
+    en_US: A tool for saving chat history as structured logs
+    zh_Hans: 用于将对话记录保存为结构化日志的工具
+    pt_BR: Uma ferramenta para salvar o histórico de conversas como registros estruturados
+  llm: Tool for structured chat history logging
+parameters:
+  - name: summary
+    type: string
+    required: true
+    label:
+      en_US: summary
+      zh_Hans: summary
+      pt_BR: summary
+    human_description:
+      en_US: summary
+      zh_Hans: summary
+      pt_BR: summary
+    llm_description: summary
+    form: llm
+  - name: chat_time
+    type: string
+    required: true
+    label:
+      en_US: Chat Time
+      zh_Hans: 对话时间
+      pt_BR: Hora da Conversa
+    human_description:
+      en_US: Timestamp of the chat
+      zh_Hans: 对话的时间戳
+      pt_BR: Registro de data e hora da conversa
+    llm_description: Timestamp indicating when the chat took place
+    form: llm
+  - name: user_id
+    type: string
+    required: true
+    label:
+      en_US: User ID
+      zh_Hans: 用户ID
+      pt_BR: ID do Usuário
+    human_description:
+      en_US: ID of the user involved in the chat
+      zh_Hans: 参与对话的用户ID
+      pt_BR: ID do usuário envolvido na conversa
+    llm_description: Identifier of the chat participant
+    form: llm
+  - name: last_chat_id
+    type: string
+    required: true
+    label:
+      en_US: last_chat_id
+      zh_Hans: last_chat_id
+      pt_BR: last_chat_id
+    human_description:
+      en_US: last_chat_id
+      zh_Hans: last_chat_id
+      pt_BR: last_chat_id
+    llm_description: Identifier of the chat participant
+    form: llm

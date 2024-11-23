@@ -1,0 +1,29 @@
+identity:
+  name: a_custom_tool_inner
+  author: zcp
+  label:
+    en_US: acustomtool1
+    zh_Hans: acustomtool1
+    pt_BR: acustomtool1
+  icon: icon.svg
+description:
+  human:
+    en_US: A tool for grabbing local image
+    zh_Hans: A tool for grabbing local image
+    pt_BR: A tool for grabbing local image
+  llm: A tool for grabbing local image
+parameters:
+  - name: image_url
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: key words for searching
+      zh_Hans: 查询关键词
+      pt_BR: key words for searching
+    llm_description: key words for searching, this should be in the language of "language" parameter
+    form: llm
+ 
