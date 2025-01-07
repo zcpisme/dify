@@ -377,7 +377,10 @@ class OAIAPICompatLargeLanguageModel(_CommonOaiApiCompat, LargeLanguageModel):
                 for tool in tools:
                     formatted_tools.append(helper.dump_model(PromptMessageFunction(function=tool)))
 
-                data["tools"] = formatted_tools
+                if prompt_messages[-1].role.value == "tool":
+                    data["tools"] = None
+                else:
+                    data["tools"] = formatted_tools
 
         if stop:
             data["stop"] = stop
@@ -479,7 +482,7 @@ class OAIAPICompatLargeLanguageModel(_CommonOaiApiCompat, LargeLanguageModel):
                 # ignore sse comments
                 if chunk.startswith(":"):
                     continue
-                decoded_chunk = chunk.strip().removeprefix("data: ")
+                decoded_chunk = chunk.strip().removeprefix("data:").lstrip()
                 if decoded_chunk == "[DONE]":  # Some provider returns "data: [DONE]"
                     continue
 
