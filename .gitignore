@@ -206,3 +206,4 @@ plugins.jsonl
 # mise
 mise.toml
 web/yarn.lock
+chatlog_db/
